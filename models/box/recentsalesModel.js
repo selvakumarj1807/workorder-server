@@ -2,11 +2,7 @@ const { request } = require('express');
 const mongoose = require('mongoose');
 
 const RecentsalesSchema = new mongoose.Schema({
-    number: {
-        type: String,
-        required: [true, "Pls enter the number"]
-    },
-    customer: {
+    productName: {
         type: String,
         required: [true, "Pls enter customer"]
     },
@@ -14,17 +10,13 @@ const RecentsalesSchema = new mongoose.Schema({
         type: String,
         required: [true, "Pls enter product"]
     },
-    price: {
+    modelNumber: {
         type: String,
         required: [true, "Pls enter price"]
     },
     status: {
         type: String,
         required: [true, "Pls enter status"]
-    },
-    id: {
-        type: String,
-        required: [true, "Pls enter id"]
     },
     createdAt: {
         type: Date,

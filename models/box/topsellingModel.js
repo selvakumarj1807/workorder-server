@@ -2,25 +2,25 @@ const { request } = require('express');
 const mongoose = require('mongoose');
 
 const TopsellingSchema = new mongoose.Schema({
-    preview: {
+    productName: {
         type: String,
-        required: [true, "Pls enter the preview"]
+        required: [true, "Pls enter the productName"]
     },
-    name: {
+    company: {
         type: String,
-        required: [true, "Pls enter name"]
+        required: [true, "Pls enter company"]
     },
-    price: {
+    engineCode: {
         type: String,
-        required: [true, "Pls enter price"]
+        required: [true, "Pls enter engineCode"]
     },
-    sold: {
-        type: String,
-        required: [true, "Pls enter sold"]
+    createDate: {
+        type: Date,
+        default: Date.now()
     },
-    id: {
+    deleveryDate: {
         type: String,
-        required: [true, "Pls enter id"]
+        required: [true, "Pls deleveryDate"]
     },
     createdAt: {
         type: Date,
