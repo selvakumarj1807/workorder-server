@@ -21,10 +21,6 @@ const TopsellingSchema = new mongoose.Schema({
     deleveryDate: {
         type: String,
         required: [true, "Pls deleveryDate"]
-    },
-    createdAt: {
-        type: Date,
-        default: Date.now()
     }
 })
 
