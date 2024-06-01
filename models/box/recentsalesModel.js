@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const RecentsalesSchema = new mongoose.Schema({
     productName: {
         type: String,
-        required: [true, "Pls enter customer"]
+        required: [true, "Pls enter productName"]
     },
     product: {
         type: String,
@@ -12,7 +12,7 @@ const RecentsalesSchema = new mongoose.Schema({
     },
     modelNumber: {
         type: String,
-        required: [true, "Pls enter price"]
+        required: [true, "Pls enter modelNumber"]
     },
     status: {
         type: String,
