@@ -3,12 +3,15 @@ const app = express();
 const errorMiddleware = require('./middlewares/error');
 const cors = require('cors')
 const cookieParser = require('cookie-parser')
-
+const bodyParser = require('body-parser')
 const path = require("path");
+
+
 
 app.use(express.json());
 app.use(cors());
 app.use(cookieParser());
+app.use(bodyParser.json())
 app.use(express.static(path.join(__dirname,"js")));
 
 // admin - vendor-management
