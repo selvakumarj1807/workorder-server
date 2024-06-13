@@ -4,27 +4,36 @@ const mongoose = require('mongoose');
 const EnquiryModelSchema = new mongoose.Schema({
     year: {
         type: String,
+        required: [true, "Please enter Year"]
     },
     make: {
         type: String,
+        required: [true, "Please enter Make"]
+
     },
     model: {
         type: String,
+        required: [true, "Please enter Model"]
     },
     contactName: {
         type: String,
+        required: [true, "Please enter Contact name"]
     },
     email: {
         type: String,
+        required: [true, "Please enter Email"]
     },
     mobileNumber: {
         type: String,
+        required: [true, "Please enter MobileNumber"]
     },
     postalCode: {
         type: String,
+        required: [true, "Please enter PostalCode"]
     },
     shippingMethod: {
         type: String,
+        required: [true, "Please Select the Shipping Method"]
         // required: [true, "Pls enter shipping method"],
         // enum: {
         //     values: [
@@ -37,6 +46,7 @@ const EnquiryModelSchema = new mongoose.Schema({
     }, 
     state: {
         type: String,
+        required: [true, "Please select State"]
     },
     additionalNotes : {
         type: String,
